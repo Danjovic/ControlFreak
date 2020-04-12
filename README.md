@@ -5,7 +5,9 @@ The base circuit uses a cheap Arduino Pro Micro that come up with an ATMega32U4 
 
 ![Pro Micro](/doc/ProMicro.png)
 
-Such board combined with [HID-Project](https://github.com/NicoHood/HID) provides classes for several HID devices including a resourceful game controller with 6 analog axes, 32 buttons and a POV hat.
+Such board combined with [HID-Project](https://github.com/NicoHood/HID) provides classes for several HID devices including a resourceful game controller with 6 analog axes, 32 buttons and a 2 Dpads.
 
 ![Button Mapping](/doc/buttons.png)
+![Button Mapping - Linux](/doc/buttonsOnLinux.png)
+
 
