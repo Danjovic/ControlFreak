@@ -26,7 +26,8 @@
 //   / _` / -_)  _| | ' \| |  _| / _ \ ' \(_-<
 //   \__,_\___|_| |_|_||_|_|\__|_\___/_||_/__/
 //
-//  AVR
+
+//                             AVR
 #define joy1Button1 2    //  PD1/INT1
 #define joy1Button2 3    //  PD0/INT0
 #define joy2Button1 4    //  PD4
@@ -42,7 +43,7 @@
 #define releaseCaps() DDRF  = 0x00
 #define pullupsOff()  PORTF = 0x00
 
-
+//#define DEBUG
 //                 _      _    _
 //   __ ____ _ _ _(_)__ _| |__| |___ ___
 //   \ V / _` | '_| / _` | '_ \ / -_|_-<
@@ -71,7 +72,10 @@ void setup() {
 
   // Sends a clean report to the host. This is important on any Arduino type.
   Gamepad.begin();
-  //  Serial.begin(9600);
+  
+#if defined (DEBUG)  
+  Serial.begin(9600);
+#endif
 }
 
 
@@ -81,7 +85,11 @@ void setup() {
 //   |_|  |_\__,_|_|_||_| |____\___/\___/ .__/
 //                                      |_|
 void loop() {
-  // Update Analog Axes
+
+  // Start with a clean slate
+  Gamepad.releaseAll(); 
+
+  // Update Analog Axes   
   sampleAnalogAxes();
   Gamepad.xAxis((int16_t)a1X);
   Gamepad.yAxis((int16_t)a1Y);
@@ -89,7 +97,6 @@ void loop() {
   Gamepad.ryAxis((int16_t)a2Y);
 
   // Update Buttons
-  Gamepad.releaseAll();
   if (digitalRead(joy1Button1) == 0) Gamepad.press(1);
   if (digitalRead(joy1Button2) == 0) Gamepad.press(2);
 
@@ -100,7 +107,7 @@ void loop() {
   // This writes the report to the host.
   Gamepad.write();
 
-  /*
+#if defined (DEBUG) 
     Serial.print("Joy1->");
 
     // Print Axes status
@@ -114,7 +121,7 @@ void loop() {
     Serial.print(" aY:"); Serial.print(a2Y);
 
     Serial.println();
-  */
+#endif
 
   // Simple debounce
   delay(10);
