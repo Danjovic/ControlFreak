@@ -91,6 +91,8 @@ void loop() {
 
   if (a1Y < 100) { // Brake presse
     Keyboard.press(KEY_V);
+  } else if (a1Y > 600) { // Pedal Not connected 
+    Keyboard.releaseAll();
   } else if (a1Y > 300) { // Gas pressed
     Keyboard.press(KEY_R);
   } else {

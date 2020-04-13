@@ -1,7 +1,7 @@
 /*
    ___         _           _   ___             _
   / __|___ _ _| |_ _ _ ___| | | __| _ ___ __ _| |__
-  | (__/ _ \ ' \  _| '_/ _ \ | | _| '_/ -_) _` | / /
+ | (__/ _ \ ' \  _| '_/ _ \ | | _| '_/ -_) _` | / /
   \___\___/_||_\__|_| \___/_| |_||_| \___\__,_|_\_\
 
   https://hackaday.io/project/170908-control-freak
@@ -42,6 +42,9 @@
 #define holdCaps()    DDRF  = 0xf0
 #define releaseCaps() DDRF  = 0x00
 #define pullupsOff()  PORTF = 0x00
+
+#define maxCounts     1024
+#define midRange       200
 
 //#define DEBUG
 //                 _      _    _
@@ -148,7 +151,7 @@ void sampleAnalogAxes() {
   delayMicroseconds(5);
 
   // sample inputs
-  counter = 1024;
+  counter = maxCounts;
   do  {
     sample = ~PINF;
     delayMicroseconds(3);
@@ -162,6 +165,13 @@ void sampleAnalogAxes() {
     a2Y += sample & 1; // F7
 
   } while (--counter);
+
+  // Take care of disconnected axes
+  if (a1X == maxCounts ) a1X=midRange;
+  if (a1Y == maxCounts ) a1Y=midRange;
+  if (a2X == maxCounts ) a2X=midRange;
+  if (a2Y == maxCounts ) a2Y=midRange;
+  
 
   // reset caps
   holdCaps();
