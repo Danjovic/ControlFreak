@@ -95,7 +95,6 @@ void loop() {
   // Start with a clean slate
   Gamepad.releaseAll(); 
 
-
   // Read controller  
   // Bit     15 14 13 12 11 10 9  8  7  6  5  4  3  2  1  0   
   // Button  0  0  0  0  MD X  Y  Z  ST A  C  B  RG LF DW UP
@@ -208,7 +207,23 @@ uint8_t SEGAscan(void) {
   } else if  ( (sample[6] & 0x0c) == 0)  {
   type = _3Button;
   } else
-    return _unKnown; // unknown
+    type = _unKnown; // unknown
+
+
+#if defined (DEBUG) 
+   Serial.print("Type: ");
+   switch (type) {
+    case _6Button:
+    Serial.println("6 button");
+    break;
+    case _3Button:
+    Serial.println("3 button");
+    break;    
+    default:
+    Serial.println("Unknown/Master System");
+    break;      
+    }
+#endif    
 
  
   // now populate combinedButtons variable accordingly       // 15 14 13 12 11 10 9  8  7  6  5  4  3  2  1  0
