@@ -6425,9 +6425,9 @@ A0
 <pad name="P2" x="10.16" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P1" x="12.7" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P0" x="15.24" y="-1.27" drill="1" shape="octagon"/>
-<pad name="VIN" x="17.78" y="-7.62" drill="1" shape="octagon"/>
-<pad name="GND" x="17.78" y="-10.16" drill="1" shape="octagon"/>
-<pad name="5V" x="17.78" y="-12.7" drill="1" shape="octagon"/>
+<pad name="VIN" x="17.78" y="-6.35" drill="1" shape="octagon"/>
+<pad name="GND" x="17.78" y="-8.89" drill="1" shape="octagon"/>
+<pad name="5V" x="17.78" y="-11.43" drill="1" shape="octagon"/>
 <text x="0" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="14.605" y="-5.08" size="0.6096" layer="51" font="vector">P0
 SDA
@@ -6448,9 +6448,9 @@ USB-</text>
 <text x="1.905" y="-5.08" size="0.6096" layer="51" font="vector">P5
 A0
 3v</text>
-<text x="13.97" y="-8.255" size="0.8128" layer="51" font="vector">Vin</text>
-<text x="13.97" y="-10.795" size="0.8128" layer="51" font="vector">GND</text>
-<text x="13.97" y="-13.335" size="0.8128" layer="51" font="vector">+5v</text>
+<text x="13.97" y="-6.985" size="0.8128" layer="51" font="vector">Vin</text>
+<text x="13.97" y="-9.525" size="0.8128" layer="51" font="vector">GND</text>
+<text x="13.97" y="-12.065" size="0.8128" layer="51" font="vector">+5v</text>
 <hole x="2.775" y="-20.5" drill="3"/>
 <hole x="16.275" y="-20.5" drill="3"/>
 </package>

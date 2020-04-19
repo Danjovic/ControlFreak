@@ -135,9 +135,9 @@
 <text x="16.278440625" y="20.720578125" size="0.8128" layer="21" rot="R90">P3</text>
 <text x="16.278440625" y="23.470578125" size="0.8128" layer="21" rot="R90">P4</text>
 <text x="16.278440625" y="25.970578125" size="0.8128" layer="21" rot="R90">P5</text>
-<text x="4.163440625" y="12.335578125" size="0.6096" layer="21">5V</text>
-<text x="9.373440625" y="12.470578125" size="0.6096" layer="21">VIN</text>
-<text x="6.778440625" y="12.335578125" size="0.6096" layer="21">GND</text>
+<text x="6.985" y="12.7" size="0.635" layer="21">5V</text>
+<text x="12.065" y="12.7" size="0.6096" layer="21">VIN</text>
+<text x="9.2075" y="12.7" size="0.6096" layer="21">GND</text>
 <text x="17.145" y="32.385" size="1.4224" layer="21" font="vector" ratio="15" rot="R180">DigiPCJoy</text>
 <text x="17.145" y="8.89" size="1.4224" layer="21" font="vector" ratio="15" rot="R180">Danjovic</text>
 <text x="17.145" y="6.35" size="1.4224" layer="21" font="vector" ratio="15" rot="R180">2020</text>
@@ -1400,9 +1400,9 @@ D = Direct mounting &lt;p&gt;
 <pad name="P2" x="10.16" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P1" x="12.7" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P0" x="15.24" y="-1.27" drill="1" shape="octagon"/>
-<pad name="VIN" x="17.78" y="-7.62" drill="1" shape="octagon"/>
-<pad name="GND" x="17.78" y="-10.16" drill="1" shape="octagon"/>
-<pad name="5V" x="17.78" y="-12.7" drill="1" shape="octagon"/>
+<pad name="VIN" x="17.78" y="-6.35" drill="1" shape="octagon"/>
+<pad name="GND" x="17.78" y="-8.89" drill="1" shape="octagon"/>
+<pad name="5V" x="17.78" y="-11.43" drill="1" shape="octagon"/>
 <text x="0" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="14.605" y="-5.08" size="0.6096" layer="51" font="vector">P0
 SDA
@@ -1423,9 +1423,9 @@ USB-</text>
 <text x="1.905" y="-5.08" size="0.6096" layer="51" font="vector">P5
 A0
 3v</text>
-<text x="13.97" y="-8.255" size="0.8128" layer="51" font="vector">Vin</text>
-<text x="13.97" y="-10.795" size="0.8128" layer="51" font="vector">GND</text>
-<text x="13.97" y="-13.335" size="0.8128" layer="51" font="vector">+5v</text>
+<text x="13.97" y="-6.985" size="0.8128" layer="51" font="vector">Vin</text>
+<text x="13.97" y="-9.525" size="0.8128" layer="51" font="vector">GND</text>
+<text x="13.97" y="-12.065" size="0.8128" layer="51" font="vector">+5v</text>
 <hole x="2.775" y="-20.5" drill="3"/>
 <hole x="16.275" y="-20.5" drill="3"/>
 </package>
@@ -1658,8 +1658,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="5.118440625" y1="17.78" x2="6.35" y2="17.78" width="0.3048" layer="16"/>
 <wire x1="4.445" y1="18.453440625" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
 <contactref element="B1" pad="5V"/>
-<wire x1="6.35" y1="11.43" x2="5.118440625" y2="12.7" width="0.3048" layer="16"/>
-<wire x1="5.118440625" y1="12.7" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
+<wire x1="7.62" y1="11.43" x2="6.35" y2="11.43" width="0.3048" layer="16"/>
+<wire x1="6.35" y1="11.43" x2="5.118440625" y2="12.661559375" width="0.3048" layer="16"/>
+<wire x1="5.118440625" y1="12.661559375" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="C1" pad="2"/>
