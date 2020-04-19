@@ -1400,9 +1400,9 @@ D = Direct mounting &lt;p&gt;
 <pad name="P2" x="10.16" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P1" x="12.7" y="-1.27" drill="1" shape="octagon"/>
 <pad name="P0" x="15.24" y="-1.27" drill="1" shape="octagon"/>
-<pad name="VIN" x="17.78" y="-8.89" drill="1" shape="octagon"/>
-<pad name="GND" x="17.78" y="-11.43" drill="1" shape="octagon"/>
-<pad name="5V" x="17.78" y="-13.97" drill="1" shape="octagon"/>
+<pad name="VIN" x="17.78" y="-7.62" drill="1" shape="octagon"/>
+<pad name="GND" x="17.78" y="-10.16" drill="1" shape="octagon"/>
+<pad name="5V" x="17.78" y="-12.7" drill="1" shape="octagon"/>
 <text x="0" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="14.605" y="-5.08" size="0.6096" layer="51" font="vector">P0
 SDA
@@ -1423,9 +1423,9 @@ USB-</text>
 <text x="1.905" y="-5.08" size="0.6096" layer="51" font="vector">P5
 A0
 3v</text>
-<text x="13.97" y="-9.525" size="0.8128" layer="51" font="vector">Vin</text>
-<text x="13.97" y="-12.065" size="0.8128" layer="51" font="vector">GND</text>
-<text x="13.97" y="-14.605" size="0.8128" layer="51" font="vector">+5v</text>
+<text x="13.97" y="-8.255" size="0.8128" layer="51" font="vector">Vin</text>
+<text x="13.97" y="-10.795" size="0.8128" layer="51" font="vector">GND</text>
+<text x="13.97" y="-13.335" size="0.8128" layer="51" font="vector">+5v</text>
 <hole x="2.775" y="-20.5" drill="3"/>
 <hole x="16.275" y="-20.5" drill="3"/>
 </package>
@@ -1644,7 +1644,9 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="18.415" y="35.814" size="1.016" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="36.195" y="28.702" size="1.778" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="B1" library="Digistump" package="DIGISPARK_SOCKET" value="Digispark" x="19.05" y="29.21" rot="R270"/>
+<element name="B1" library="Digistump" package="DIGISPARK_SOCKET" value="Digispark" x="19.05" y="29.21" smashed="yes" rot="R270">
+<attribute name="NAME" x="20.32" y="29.21" size="1.27" layer="25" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="+5V">
@@ -1656,8 +1658,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="5.118440625" y1="17.78" x2="6.35" y2="17.78" width="0.3048" layer="16"/>
 <wire x1="4.445" y1="18.453440625" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
 <contactref element="B1" pad="5V"/>
-<wire x1="5.08" y1="11.43" x2="5.118440625" y2="11.43" width="0.3048" layer="16"/>
-<wire x1="5.118440625" y1="11.43" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
+<wire x1="6.35" y1="11.43" x2="5.118440625" y2="12.7" width="0.3048" layer="16"/>
+<wire x1="5.118440625" y1="12.7" x2="5.118440625" y2="17.78" width="0.3048" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="C1" pad="2"/>
